@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import PreNavbar from './components/PreNavbar';
 import Navbar from "./components/Navbar.js"
@@ -12,13 +11,19 @@ import HotAccessoriesMenu from "./components/HotAccessoriesMenu.js"
 import HotAccessories from "./components/HotAccessories.js"
 import ProductReviews from "./components/productReviews.js"
 import Videos from "./components/Videos.js"
-
+import Banner from "./components/Banner.js"
+import Footer from "./components/Footer.js"
+import NavOptions from "./components/NavOptions.js"
 
 function App() {
   return (
     <Router>
       <PreNavbar />
       <Navbar />
+      
+      <NavOptions miPhones={data.miPhones} redmiPhones={data.redmiPhones} tv={data.tv} laptop={data.laptop} fitnessAndLifeStyle={data.fitnessAndLifeStyle} home={data.home} radio={data.radio} audio={data.audio} accessories={data.accessories} />
+
+
       <Slider start={data.banner.start} />
       <Offers offer={data.offer} />
       <Heading text="STAR PRODUCTS" />
@@ -51,6 +56,9 @@ function App() {
       <ProductReviews productReviews={data.productReviews}/>
       <Heading text="VIDEOS"/>
       <Videos videos={data.videos}/>
+      <Heading text="IN THE PRESS"/>
+      <Banner banner={data.banner} />
+      <Footer footer={data.footer} />
     </Router>
   );
 }

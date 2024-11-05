@@ -22,8 +22,6 @@
     fill: rgba(255, 255, 255);
 }
 .videoCard:hover a{
-    padding: 2.5vmax;
-    border: none;
     background-color: rgba(255, 255, 255, 0.671);
 }
 .videoCard p{
