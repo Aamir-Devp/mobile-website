@@ -2,15 +2,15 @@ import React,{useState, useEffect} from 'react'
 import NavCard from "./NavCard.js"
 import "../styles/NavOptions.css"
 
-const NavOptions = ({ miPhones, redmiPhones, tv, laptops, fitnessAndLifeStyle, home, audio, accessories }) => {
-    const [miPhoneToggle, setMiPhoneToggle] = useState(false);
-    const [redmiPhonesToggle, setRedmiPhonesToggle] = useState(false);
-    const [tvToggle, setTvToggle] = useState(false);
-    const [laptopsToggle, setLaptopsToggle] = useState(false);
-    const [fitnessAndLifeStyleToggle, setFitnessAndLifeStyleToggle] = useState(false);
-    const [homeToggle, setHomeToggle] = useState(false);
-    const [audioToggle, setAudioToggle] = useState(false);
-    const [accessoriesToggle, setAccessoriesToggle] = useState(false);
+const NavOptions = ({ miPhones, redmiPhones, tv, laptop, fitnessAndLifeStyle, home, audio, accessories }) => {
+    const [miPhoneToggle, setMiPhoneToggle] = useState("");
+    const [redmiPhonesToggle, setRedmiPhonesToggle] = useState("");
+    const [tvToggle, setTvToggle] = useState("");
+    const [laptopsToggle, setLaptopsToggle] = useState("");
+    const [fitnessAndLifeStyleToggle, setFitnessAndLifeStyleToggle] = useState("");
+    const [homeToggle, setHomeToggle] = useState("");
+    const [audioToggle, setAudioToggle] = useState("");
+    const [accessoriesToggle, setAccessoriesToggle] = useState("");
 
     useEffect(() => {
         if(window.location.pathname === "/miphones"){
@@ -44,25 +44,25 @@ const NavOptions = ({ miPhones, redmiPhones, tv, laptops, fitnessAndLifeStyle, h
             {miPhoneToggle ? miPhones.map((item) => (
                 <NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
             )) : null}
-            {redmiPhonesToggle ? miPhones.map((item) => (
+            {redmiPhonesToggle ? redmiPhones.map((item) => (
                 <NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
             )) : null}
-            {tvToggle ? miPhones.map((item) => (
+            {tvToggle ? tv.map((item) => (
                 <NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
             )) : null}
-            {laptopsToggle ? miPhones.map((item) => (
+            {laptopsToggle ? laptop.map((item) => (
                 <NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
             )) : null}
-            {fitnessAndLifeStyleToggle ? miPhones.map((item) => (
+            {fitnessAndLifeStyleToggle ? fitnessAndLifeStyle.map((item) => (
                 <NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
             )) : null}
-            {homeToggle ? miPhones.map((item) => (
+            {homeToggle ? home.map((item) => (
                 <NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
             )) : null}
-            {audioToggle ? miPhones.map((item) => (
+            {audioToggle ? audio.map((item) => (
                 <NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
             )) : null}
-            {accessoriesToggle ? miPhones.map((item) => (
+            {accessoriesToggle ? accessories.map((item) => (
                 <NavCard name={item.name} price={item.price} image={item.image} key={item.image} />
             )) : null}
         </div>
