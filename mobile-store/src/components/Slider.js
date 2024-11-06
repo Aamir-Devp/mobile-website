@@ -1,6 +1,5 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
-import CarouselCaption from 'react-bootstrap/esm/CarouselCaption';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Slider = ({start}) => {
